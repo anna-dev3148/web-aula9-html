@@ -7,4 +7,4 @@
 - Link: []()
 
 ## Exercício 3
-- Link: [l]()
+- Link: []()
