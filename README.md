@@ -4,7 +4,7 @@
 - Link: [pratica2.html](https://github.com/anna-dev3148/web-aula9-html/blob/main/pratica2.html)
   
 ## Exercício 2
-- Link: []()
+- Link: [exercicio2](https://github.com/anna-dev3148/web-aula9-html/blob/main/exercicio2.html)
 
 ## Exercício 3
 - Link: []()
