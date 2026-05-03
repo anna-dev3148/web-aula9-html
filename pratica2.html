@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <script>
+      window.onload = inicio;
+
+      let campo_nome, campo_media, campo_ifa, botao, campo_saida;
+
+      function inicio() {
+        campo_nome = document.getElementById("nome");
+
+        campo_media = document.getElementById("media");
+
+        campo_ifa = document.getElementById("ifa");
+
+        botao = document.getElementById("botao");
+        botao.addEventListener("click", verificar);
+
+        campo_saida = document.getElementById("saida");
+      }
+
+      function verificar() {
+        let nome = campo_nome.value;
+
+        let media = parseFloat(campo_media.value.replace(",", "."));
+
+        let ifa = parseFloat(campo_ifa.value.replace(",", "."));
+
+        if (media >= 6.0) {
+          campo_saida.innerHTML =
+            nome + ", aprovado com " + campo_media.value + " pontos!";
+        } else if (ifa >= 6.0) {
+          campo_saida.innerHTML =
+            nome + ", aprovado com " + campo_ifa.value + " pontos!";
+        } else if (media < 6.0 && ifa < 6.0) {
+          campo_saida.innerHTML =
+            nome + ", reprovado com " + campo_ifa.value + " pontos.";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <label for="">Nome:</label>
+    <input type="text" id="nome" /><br />
+
+    <label for="">Média:</label>
+    <input type="text" id="media" /><br />
+
+    <label for="">IFA:</label>
+    <input type="text" id="ifa" /><br />
+
+    <button id="botao">Verificar</button>
+
+    <p id="saida"></p>
+  </body>
+</html>
