@@ -7,4 +7,4 @@
 - Link: [exercicio2](https://github.com/anna-dev3148/web-aula9-html/blob/main/exercicio2.html)
 
 ## Exercício 3
-- Link: []()
+- Link: [exercicio3](https://github.com/anna-dev3148/web-aula9-html/blob/main/exercicio3.html)
