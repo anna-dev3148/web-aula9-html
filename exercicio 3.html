@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath fill='%23000000' d='M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm120-120h80v-80h-80v80Zm160 0h160v-80H480v80ZM320-400h80v-80h-80v80Zm160 0h160v-80H480v80ZM320-560h320v-80H320v80Zm-120 360v-560 560Z'/%3E%3C/svg%3E"
+      type="image/svg+xml"
+    />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .calculadora {
+        display: inline-block;
+        padding: 25px;
+        border: 1px solid #ccc;
+        background-color: #1f71a8;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      input {
+        width: 90%;
+        font-size: 24px;
+        text-align: right;
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        background-color: #ecf0f1;
+      }
+
+      button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin: 5px;
+        cursor: pointer;
+        border-radius: 50%; /* Deixa redondo */
+        border: none;
+        background-color: #bdc3c7;
+        font-weight: bold;
+      }
+
+      .btn-op {
+        background-color: #02ac30;
+        color: white;
+      }
+
+      #btnLimpar {
+        background-color: #e74c3c;
+        color: white;
+      }
+    </style>
+
+    <script>
+      window.onload = inicio;
+
+      let visor;
+
+      function inicio() {
+        visor = document.getElementById("visor");
+
+        document.getElementById("btn7").addEventListener("click", clica7);
+        document.getElementById("btn8").addEventListener("click", clica8);
+        document.getElementById("btn9").addEventListener("click", clica9);
+        document.getElementById("btnDiv").addEventListener("click", clicaDiv);
+
+        document.getElementById("btn4").addEventListener("click", clica4);
+        document.getElementById("btn5").addEventListener("click", clica5);
+        document.getElementById("btn6").addEventListener("click", clica6);
+        document.getElementById("btnMult").addEventListener("click", clicaMult);
+
+        document.getElementById("btn1").addEventListener("click", clica1);
+        document.getElementById("btn2").addEventListener("click", clica2);
+        document.getElementById("btn3").addEventListener("click", clica3);
+        document.getElementById("btnSub").addEventListener("click", clicaSub);
+
+        document.getElementById("btn0").addEventListener("click", clica0);
+        document
+          .getElementById("btnPonto")
+          .addEventListener("click", clicaPonto);
+        document.getElementById("btnSoma").addEventListener("click", clicaSoma);
+
+        document.getElementById("btnIgual").addEventListener("click", calcular);
+        document.getElementById("btnLimpar").addEventListener("click", limpar);
+      }
+
+      function clica7() {
+        visor.value += "7";
+      }
+      function clica8() {
+        visor.value += "8";
+      }
+      function clica9() {
+        visor.value += "9";
+      }
+      function clicaDiv() {
+        visor.value += "/";
+      }
+
+      function clica4() {
+        visor.value += "4";
+      }
+      function clica5() {
+        visor.value += "5";
+      }
+      function clica6() {
+        visor.value += "6";
+      }
+      function clicaMult() {
+        visor.value += "*";
+      }
+
+      function clica1() {
+        visor.value += "1";
+      }
+      function clica2() {
+        visor.value += "2";
+      }
+      function clica3() {
+        visor.value += "3";
+      }
+      function clicaSub() {
+        visor.value += "-";
+      }
+
+      function clica0() {
+        visor.value += "0";
+      }
+      function clicaPonto() {
+        visor.value += ".";
+      }
+      function clicaSoma() {
+        visor.value += "+";
+      }
+
+      function calcular() {
+        visor.value = eval(visor.value);
+      }
+
+      function limpar() {
+        visor.value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="calculadora">
+      <input type="text" id="visor" readonly />
+      <br />
+      <button id="btn7">7</button>
+      <button id="btn8">8</button>
+      <button id="btn9">9</button>
+      <button id="btnDiv" class="btn-op">/</button>
+      <br />
+      <button id="btn4">4</button>
+      <button id="btn5">5</button>
+      <button id="btn6">6</button>
+      <button id="btnMult" class="btn-op">*</button>
+      <br />
+      <button id="btn1">1</button>
+      <button id="btn2">2</button>
+      <button id="btn3">3</button>
+      <button id="btnSub" class="btn-op">-</button>
+      <br />
+      <button id="btnLimpar">C</button>
+      <button id="btn0">0</button>
+      <button id="btnPonto">.</button>
+      <button id="btnSoma" class="btn-op">+</button>
+      <br />
+
+      <button
+        id="btnIgual"
+        class="btn-op"
+        style="width: 115px; border-radius: 25px"
+      >
+        =
+      </button>
+    </div>
+  </body>
+</html>
